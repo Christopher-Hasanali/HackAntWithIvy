@@ -1,0 +1,7 @@
+<ivy-module version="2.0">
+    <info organisation="com.hasanac.test.antivy" module="HackAntWithIvy"/>
+    <dependencies>
+        <dependency org="junit" name="junit" rev="4.11"/>
+        <dependency org="org.hamcrest" name="hamcrest-all" rev="1.3"/>
+    </dependencies>
+</ivy-module>
