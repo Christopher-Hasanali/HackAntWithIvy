@@ -1,6 +1,7 @@
 <project xmlns:ivy="antlib:org.apache.ivy.ant" name="HackAntWithIvy" default="jar">
     <property name="projectName" value="HasanacSpringInAction"/>
     <property name="src.dir" value="src"/>
+    <property name="config.dir" value="META-INF"/>
     <property name="build.dir" value="build"/>
     <property name="classes.dir" value="${build.dir}/classes"/>
     <property name="jar.dir" value="${build.dir}/jar"/>
@@ -23,12 +24,18 @@
         <javac srcdir="${src.dir}" includeantruntime="false" destdir="${classes.dir}" classpathref="lib.path.id"/>
     </target>
 
+    <!-- copy hbm files ${dist.dir} -->
+    <target name="copy-xml" description="Copy xml files">
+        <copy todir="${build.dir}/META-INF">
+            <fileset dir="${config.dir}"/>
+        </copy>
+    </target>
     <target name="jar" depends="compile">
         <mkdir dir="${jar.dir}"/>
         <jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${classes.dir}"/>
     </target>
 
-    <target name="springjar" depends="compile" description="package, output to JAR">
+    <target name="springjar" depends="compile,copy-xml" description="package, output to JAR">
 
         <!-- Create the distribution directory -->
         <mkdir dir="${jar.dir}"/>
