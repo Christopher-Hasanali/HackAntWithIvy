@@ -21,7 +21,8 @@ A step by step series of examples that tell you have to get a development env ru
 
 
 ```
-ant run  #For running application, Check other targets in build.xml file
+ant release  #For running application, Check other targets in build.xml file
+ant springrelease && ant springrun #for running spring application via Apache Ant + Ivy
 ```
 
 End with an example of getting some data out of the system or using it for a little demo

@@ -1,1 +1,7 @@
+HackAntWithIvy.iml
 .idea/
+.DS_Store
+build/
+lib/
+out/
+.gitignore

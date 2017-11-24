@@ -3,5 +3,16 @@
     <dependencies>
         <dependency org="junit" name="junit" rev="4.11"/>
         <dependency org="org.hamcrest" name="hamcrest-all" rev="1.3"/>
+        <dependency org="org.springframework" name="spring-core" rev="3.2.4.RELEASE" />
+        <dependency org="org.springframework" name="spring-expression" rev="3.2.4.RELEASE" />
+        <dependency org="org.springframework" name="spring-beans" rev="3.2.4.RELEASE" />
+        <dependency org="org.springframework" name="spring-aop" rev="3.2.4.RELEASE" />
+        <dependency org="org.springframework" name="spring-context" rev="3.2.4.RELEASE" />
+        <dependency org="org.springframework" name="spring-context-support" rev="3.2.4.RELEASE" />
+        <dependency org="org.slf4j" name="slf4j-api" rev="1.7.12" />
+        <!-- runtime dependencies -->
+        <!-- test dependencies -->
+        <!-- excludes -->
+
     </dependencies>
 </ivy-module>
